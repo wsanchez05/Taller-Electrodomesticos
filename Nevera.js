@@ -4,7 +4,7 @@ export default class Nevera extends Electrodomestico
 {
     constructor (procedencia, consumo, capacidad)
     {
-        super(procedencia ,consumo, capacidad)
+        super(procedencia ,consumo)
         this.capacidad = capacidad;
         this.Precionevera = this.PrecioNevera;
     }
@@ -23,7 +23,7 @@ export default class Nevera extends Electrodomestico
         }
         else
         {
-            return super.PrecioBase;    
+            return super.CalcularPrecio;    
         }
     }
 }

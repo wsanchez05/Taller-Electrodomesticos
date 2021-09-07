@@ -4,27 +4,25 @@ export default class Tv extends Electrodomestico
 {
     constructor (procedencia, consumo, tamanio, isTdt)
     {
-        super(procedencia ,consumo, tamanio, isTdt)
+        super(procedencia ,consumo)
         this.tamanio = tamanio;
         this.isTdt = isTdt;
-        this.Preciotv = this.PrecioTv;
+        this.Preciotv = super.CalcularPrecio;
+        this.Preciotv += this.PrecioTelevisor;
     }
 
-    get PrecioTv()
-    {     
-        
+    get PrecioTelevisor()
+    {    
+        this.TDT =0;
+        this.porcentaje = 0;
+        if (this.isTdt===true)
+        {
+            this.TDT = 250000;
+        }
         if(this.tamanio >40)
         {
-            this.Preciotv = (super.CalcularPrecio*3)/100;
-
-            if (this.isTdt)
-            {
-                this.Preciotv += 250000;
-            }
+              this.porcentaje = this.Preciotv*0.3;
         }
-        else
-        {
-            return super.PrecioBase;    
-        }
+        return this.TDT+this.porcentaje;
     }
 }
