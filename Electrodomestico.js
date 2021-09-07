@@ -1,4 +1,5 @@
-export default class Electrodomestico{
+export default class Electrodomestico
+{
     
     
     constructor(procedencia, consumo)

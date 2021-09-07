@@ -15,7 +15,7 @@ export default class Nevera extends Electrodomestico
         if(this.capacidad >120)
         {
             
-             this.CapacidadExcedida = parseInt((this.capacidad-120)/10);
+             this.CapacidadExcedida = parseInt((this.capacidad-120)/10);        
              this.PorcentajePrecio = super.CalcularPrecio*5/100;
              this.ValorAdicional = this.CapacidadExcedida*this.PorcentajePrecio;
                return this.Precionevera = super.CalcularPrecio + this.ValorAdicional;
